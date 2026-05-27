@@ -1,0 +1,19 @@
+1. Initial Setup 
+  - npm init --y
+  - npm add bcryptjs
+  - npm add cors
+  - npm add express 
+  - npm add express-rate-limit //Prevent DDOS Attack
+  - npm add express-validator //Validate incoming data
+  - npm add helmet // Overall Security Management
+  - npm add hpp // Prevents HTTP Parameter Pollution attacks. Duplicate parameters
+  - npm add jsonwebtoken // JWT is used for secure authentication and authorization.
+  - npm add mongoose // MongoDB ODM (Object Data Modeling).
+  - npm add nodemailer // Nodemailer is used to send emails.
+
+
+2. Application Security
+3. JWT Authentication Encode Decode
+  - // Encryption Process
+    // Plain Text -> (Plain_Text + Public_KEY + Algorithm) -> Cipher Text
+  - 

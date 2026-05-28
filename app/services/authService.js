@@ -6,7 +6,7 @@ export async function registerUser({email , firstname , lastname , mobile , pass
 
         const normalizedEmail = email.toLowerCase().trim();
         const normalizedMobile = mobile.trim();
-        const existingUser = await users.findOne({
+        const existingUser = await User.findOne({
             $or : [
                 {email: normalizedEmail},
                 {mobile: normalizedMobile}
@@ -18,8 +18,8 @@ export async function registerUser({email , firstname , lastname , mobile , pass
         }
 
         try {
-            passwordHash = await bcrypt.hash(password,10)
-            await User.create({
+            const passwordHash = await bcrypt.hash(password,10)
+            const newUser = await User.create({
                 email:normalizedEmail,
                 firstname,
                 lastname,
@@ -27,7 +27,7 @@ export async function registerUser({email , firstname , lastname , mobile , pass
                 password: passwordHash
             });
             return {
-                _id : user._id,
+                _id : newUser._id,
                 message:"Registration Successfull",
                 status: 201,              
             }

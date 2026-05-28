@@ -3,6 +3,9 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 
+//Database Connection
+import connectDB from "./app/config/db.js";
+
 
 //Security-Packages BEFORE MAIN ROUTING ENDPOINT
 import ratelimit from "express-rate-limit";
@@ -42,6 +45,7 @@ app.set("etag" , false);
 //Routes
 //app.use("/api" , router);
 
+connectDB();
 
 app.listen(3000 , () => {
     console.log("Server is running on port 3000");

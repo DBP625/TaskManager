@@ -16,4 +16,8 @@
 3. JWT Authentication Encode Decode
   - // Encryption Process
     // Plain Text -> (Plain_Text + Public_KEY + Algorithm) -> Cipher Text
-  - 
+4. Email send
+
+
+Next Goal: Task Management System API Generation
+5. Database Connection

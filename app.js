@@ -1,5 +1,6 @@
 import express from "express";
-//import router from "./routes/api.js";
+import router from "./routes/api.js";
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -39,11 +40,10 @@ app.use(limiter);
 //Web Cache
 app.set("etag" , false);
 
-//MongoDB Connection
 
 
 //Routes
-//app.use("/api" , router);
+app.use("/api" , router);
 
 connectDB();
 

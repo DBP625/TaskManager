@@ -26,4 +26,3 @@ export const DecryptToken = (token) => {
     }
 }
 
-// console.log(DecryptToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhbnRobzYyNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjo2MjUsImlhdCI6MTc3OTg4Njc5MCwiZXhwIjoxNzc5OTczMTkwfQ.khlMnA8ZLKXGy9VYyZ6PaapRa4UJe4kMt7ITRWVnTXY"));

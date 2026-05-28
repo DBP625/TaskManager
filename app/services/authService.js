@@ -1,6 +1,6 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcryptjs";
-import {EncodeToken , DecryptToken} from "../config/token.js"
+import {EncodeToken} from "../config/token.js"
 
 export async function registerUser({email , firstname , lastname , mobile , password}){
 
@@ -47,7 +47,8 @@ export async function loginUser({email, password}){
     if(!isPasswordValid){
         throw new Error("Invalid Password");
     }
-    return {
-        
-    }
+
+    const token = EncodeToken(user.email , user._id)
+    return {token} ;
+
 }
